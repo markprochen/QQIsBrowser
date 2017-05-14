@@ -1,0 +1,26 @@
+{
+ 
+    "manifest_version": 2,
+    "name": "qqBrowser",
+    "description": "a currently clone",
+    "version": "0.1",
+    "browser_action": {
+       
+        "default_title": "qqBrowser",
+        "default_popup": "Index.html"
+    },
+     "icons": {
+        "16": "img/icon.jpg",
+        "48": "img/icon.jpg",
+        "128": "img/icon.jpg"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.qq.com/*"],
+            "js": ["lib/QQBrowser.js"],
+            "run_at":"document_end",
+            "all_frames": true
+            
+        }
+    ]
+}
